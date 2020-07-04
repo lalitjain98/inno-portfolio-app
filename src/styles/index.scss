@@ -1,0 +1,292 @@
+
+$spacing-0: 0;
+$spacing-1: 0.25rem;
+$spacing-2: 0.5rem;
+$spacing-3: 0.75rem;
+$spacing-4: 1rem;
+$spacing-5: 1.25rem;
+$spacing-6: 1.5rem;
+
+$xs: 320px;
+$sm: 600px;
+$md: 900px;
+$lg: 1200px; 
+
+body {
+  margin: 0;
+  font-family: Lato, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #eee;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.container {
+  
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to bottom right, rgb(15, 82, 102), rgb(55, 134, 238)); 
+  color: white;
+  padding: 1rem;
+
+  .navbar-logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  width: calc(100% - 2em);
+  justify-content: center;
+  padding: 1em;
+  color: rgb(30, 36, 39);
+  max-width: 1000px;
+  margin: auto;
+}
+
+.user-name {
+  font-size: 2rem;
+  letter-spacing: 0.05em;
+  font-weight: 700;
+  padding-bottom: 10px;
+}
+
+.designation {
+  font-size: 1.5rem;
+  padding-bottom: 10px;
+}
+
+.card {
+  background-color: #fff;
+  padding: 1em;
+  margin: 1em auto;
+  width: calc(100% - 2em);
+  border-radius: 2px;
+}
+
+.card-shadow {
+  box-shadow: 0 0 10px 10px #ddd;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.card-content {
+
+}
+
+.card-footer {
+
+}
+
+.basic-details-wrapper {
+  @media screen and (max-width: $sm){
+    flex-direction: column;
+    width: 100% !important;
+  }
+  .name-designation-wrapper {
+    @media screen and (max-width: $sm){
+      width: 100% !important;
+    }
+  }
+  .contact-details-wrapper {
+    line-height: 1.5em;
+    @media screen and (max-width: $sm){
+      width: 100% !important;
+    }
+  }
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.skill {
+  border-radius: 2em;
+  background: linear-gradient(to bottom right, rgb(147, 252, 126),rgb(104, 255, 90));
+  color: #060657;
+  padding: 0.5em 2em;
+  margin: 0.5em;
+  transition: all 0.25s ease-in-out;
+}
+
+.skill:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 1px 1px rgb(35, 141, 212);
+  background: linear-gradient(to bottom right, rgb(104, 255, 90), rgb(147, 252, 126));
+}
+
+.section-card {
+  margin: 1.5em 0;
+}
+
+.experience-card {
+  // margin: 0;
+  padding: 0;
+  @media screen and (max-width: $sm){
+    margin: 0;
+    margin-bottom: 1em;
+  }
+  .title-date-row {
+    
+    .title {
+      font-weight: bold;
+      padding-bottom: 0.5em;
+    }
+    .date {
+      padding-bottom: 0.5em;
+      font-weight: lighter;
+    }
+  }
+  .subtitle {
+    font-style: italic;
+    padding-bottom: 0.5em;
+  }
+
+  .description {
+    line-height: 1.25em;
+    color: rgb(122, 125, 133) !important;
+  }
+}
+
+.row {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+}
+
+.col-1 {
+  width: calc((1/12) * 100%);
+}
+
+.col-2 {
+  width: calc((2/12) * 100%);
+}
+
+.col-3 {
+  width: calc((3/12) * 100%);
+}
+
+.col-4 {
+  width: calc((4/12) * 100%);
+}
+
+.col-5 {
+  width: calc((5/12) * 100%);
+}
+
+.col-6 {
+  width: calc((6/12) * 100%);
+}
+
+.col-7 {
+  width: calc((7/12) * 100%);
+}
+
+.col-8 {
+  width: calc((8/12) * 100%);
+}
+
+.col-9 {
+  width: calc((9/12) * 100%);
+}
+
+.col-10 {
+  width: calc((10/12) * 100%);
+}
+
+.col-11 {
+  width: calc((11/12) * 100%);
+}
+
+.col-12 {
+  width: calc((12/12) * 100%);
+}
+
+.justify-content-center { 
+  justify-content: center;
+}
+
+.justify-content-start { 
+  justify-content: flex-start;
+}
+
+.justify-content-end { 
+  justify-content: flex-end;
+}
+
+.justify-content-space-around { 
+  justify-content: space-around;
+}
+
+.justify-content-space-evenly { 
+  justify-content: space-evenly;
+}
+
+.justify-content-space-between { 
+  justify-content: space-between;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.align-items-start {
+  align-items: flex-start;
+}
+
+.align-items-end {
+  align-items: end;
+}
+
+.align-items-stretch {
+  align-items: stretch;
+}
+
+.m-0 {
+  margin: $spacing-0;
+}
+
+.m-1 {
+  margin: $spacing-1;
+}
+
+.m-2 {
+  margin: $spacing-2;
+}
+
+.m-3 {
+  margin: $spacing-3;
+}
+
+.m-4 {
+  margin: $spacing-4;
+}
+
+.m-5 {
+  margin: $spacing-5;
+}
+
+.m-6 {
+  margin: $spacing-6;
+}
