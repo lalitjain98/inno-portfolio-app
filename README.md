@@ -1,3 +1,10 @@
+Setup instructions:
+1. `git clone https://github.com/lalitjain98/inno-portfolio-app.git`
+2. `cd ./inno-portfolio-app`
+3. `npm i`
+4. `npm start`
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
