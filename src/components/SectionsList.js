@@ -5,7 +5,7 @@ import Section from './Section';
 
 export const SectionsList = ({ data = {} }) => {
 
-    const { sections = [] } =  data;
+    const { sections = [] } =  data || {};
 
     useEffect(() => {
         console.log("Sections List Props:", data)

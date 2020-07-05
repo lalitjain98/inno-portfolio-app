@@ -13,7 +13,6 @@ export const Experience = ({ data = {} }) => {
                     {title}
                 </div>
                 <div className="date">
-                    
                     {(() => {
                         let formatted_start_date = moment(start_date).format('MMM, YYYY');
                         let formatted_end_date = moment(end_date).format('MMM, YYYY');

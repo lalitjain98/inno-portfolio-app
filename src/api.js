@@ -22,7 +22,7 @@ const api = (endpoint = '', method = 'GET', data = null, params = null) => new P
       headers,
     })
       .then((response) => resolve(response.data))
-      .catch((err) => resolve(err.response && err.response.data));
+      .catch((err) => reject(err));
   } catch (e) {
     reject(e);
   }

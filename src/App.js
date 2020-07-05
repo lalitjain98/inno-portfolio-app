@@ -9,6 +9,7 @@ import SectionsList from './components/SectionsList';
 import SkillsList from './components/SkillsList';
 
 import Loader from './components/Loader';
+import FeedbacksContainer from './components/FeedbacksContainer';
 
 function App(props) {
 
@@ -16,12 +17,23 @@ function App(props) {
     props.getPortfolioData();
   }, []);
 
-  if(props.getPortfolioDataLoading) return <Loader />
+  
+  if(props.getPortfolioDataLoading) return (
+    <div className="container">
+      <Loader />
+    </div>
+  )
+
+  if(props.getPortfolioDataError) return (
+    <div className="row justify-content-center error">
+      { props.getPortfolioDataError }
+    </div>
+  )
 
   return (
     <div className="container">
       <header className="header">
-        <div className="navbar card-shadow">
+        <div className="navbar">
           <div className="navbar-logo">My Portfolio</div>
         </div>
       </header>
@@ -30,6 +42,8 @@ function App(props) {
         <BasicDetails />
         <SkillsList />
         <SectionsList />
+
+        <FeedbacksContainer />
       </div>
 
       <footer className="footer">
@@ -43,6 +57,7 @@ function App(props) {
 const mapStateToProps = (state) => ({
   ...state,
   getPortfolioDataLoading: state.portfolioData.getPortfolioDataLoading,
+  getPortfolioDataError: state.portfolioData.getPortfolioDataError,
 })
 
 const mapDispatchToProps = (dispatch) => ({

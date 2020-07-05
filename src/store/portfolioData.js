@@ -39,7 +39,6 @@ export default (state = initialState, { type, payload }) => {
 
 export const getPortfolioData = () => async dispatch => {
     try {
-
         dispatch({ 
             type: GET_PORTFOLIO_DATA, 
         });

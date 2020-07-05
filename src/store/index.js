@@ -3,9 +3,11 @@ import thunk from 'redux-thunk';
 import logger from 'redux-logger'
 
 import portfolioData from './portfolioData';
+import feedbacks from './feedbacks';
 
 const rootReducer = combineReducers({
     portfolioData,
+    feedbacks,
 });
 
 const initialState = { }

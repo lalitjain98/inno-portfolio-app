@@ -3,12 +3,12 @@ import { connect } from 'react-redux'
 
 import Section from './Section';
 
-export const SectionsList = ({ data = {} }) => {
+export const SkillsList = ({ data = {} }) => {
 
-    const { skills = [] } =  data;
+    const { skills = [] } =  data || {};
 
     useEffect(() => {
-        console.log("Skills List Props:", data.skills)
+        console.log("Skills List Props:", data)
     }, [data]);
 
     return (
@@ -34,4 +34,4 @@ const mapDispatchToProps = {
     
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(SectionsList)
+export default connect(mapStateToProps, mapDispatchToProps)(SkillsList)
